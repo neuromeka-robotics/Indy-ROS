@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Indy** is Neuromeka’s flagship cobot model we designed and manufactured. Guaranteeing workers’ safety based on innovative collision detection algorithms, Indy supports more intuitive direct teaching by impedance control as well as online and offline programming with the teach pendant app running on android tablets.
+**Indy** is Neuromekaï¿½s flagship cobot model we designed and manufactured. Guaranteeing workersï¿½ safety based on innovative collision detection algorithms, Indy supports more intuitive direct teaching by impedance control as well as online and offline programming with the teach pendant app running on android tablets.
 
 <center><img src=".img/intro_img.png" width="400" heigh="400"/></center> 
 
@@ -15,14 +15,15 @@ This repository contains ROS1 Noetic drivers for Indy7, Indy7V2, IndyRP2, IndyRP
 The following software needs to be installed:
 - [ROS1 Noetic](https://wiki.ros.org/noetic/Installation)
 - indyDCP3
-    ```
-    pip3 install neuromeka==3.2.0.5
+    ```bash
+    pip3 install neuromeka
+    pip3 install --upgrade neuromeka
     ```
 
 ## Installation
 
 ### Install dependencies
-```
+```bash
 sudo apt install ros-noetic-ros-control \
 ros-noetic-ros-controllers \
 ros-noetic-industrial-robot-client \
@@ -33,20 +34,27 @@ ros-noetic-warehouse-ros-mongo \
 ros-noetic-moveit-ros \
 ros-noetic-moveit-servo \
 ros-noetic-moveit-planners \
-ros-noetic-moveit-simple-controller-manager \
+ros-noetic-moveit-simple-controller-manager
 ```
 
 ### Download the source code and build
 
-```
+```bash
 git clone <this repository url>
-cd ~/indy_ros/
+cd ~/indy-ros/
+catkin_init_workspace src/
+sudo chmod +x src/indy_driver/src/*
 catkin_make
 ```
 
 ### Source the setup file
+
+```bash
+source /opt/ros/noetic/setup.bash
 ```
-. devel/setup.bash
+
+```bash
+source devel/setup.bash
 ```
 
 ## Usage

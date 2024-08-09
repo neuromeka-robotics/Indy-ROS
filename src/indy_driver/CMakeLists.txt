@@ -16,6 +16,12 @@ add_service_files(FILES
   IndyService.srv
 )
 
+add_message_files(FILES
+  ServoTx.msg
+  ServoRx.msg
+  ServoDataArray.msg
+)
+
 generate_messages(
   DEPENDENCIES
   std_msgs
