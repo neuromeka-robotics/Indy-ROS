@@ -28,3 +28,4 @@ devel*/**
 .vscode*/**
 *.bak
 *.bk
+src/CMakeLists.txt

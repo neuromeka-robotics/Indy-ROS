@@ -78,6 +78,13 @@ Use '9' '0' to adjust task speed\
 *On Real Robot*\
 Use 'H' to move Home, 'Z' to move Zero, 'S' to Recover, 'P' to stop Teleop\
 
+**Generate your URDF files**\
+You can generate your URDF files using **generate_all_urdfs.sh** file in **indy_description/urdf** folder
+```bash
+cd </..path../..to../indy_description/urdf/>
+sudo chmod +x generate_all_urdfs.sh
+./generate_all_urdfs.sh
+```
 
 ### Start Indy description
 
