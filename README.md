@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Indy** is Neuromeka�s flagship cobot model we designed and manufactured. Guaranteeing workers� safety based on innovative collision detection algorithms, Indy supports more intuitive direct teaching by impedance control as well as online and offline programming with the teach pendant app running on android tablets.
+**Indy** is Neuromeka's flagship cobot model we designed and manufactured. Guaranteeing workers safety based on innovative collision detection algorithms, Indy supports more intuitive direct teaching by impedance control as well as online and offline programming with the teach pendant app running on android tablets.
 
 <center><img src=".img/intro_img.png" width="400" heigh="400"/></center> 
 
