@@ -62,9 +62,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.858186768"/>
-      <origin rpy="0 0 0" xyz="-0.033213                             -0.001385                             0.101897"/>
-      <inertia ixx="0.001565927" ixy="-1.08e-07" ixz="-9.65e-07" iyy="0.001520073" iyz="-4.4915e-05" izz="0.001972781"/>
+      <mass value="10.512390866"/>
+      <origin rpy="0 0 0" xyz="-0.010310153                             0.000780291                             0.083318232"/>
+      <inertia ixx="0.308514702" ixy="0.000125597" ixz="0.000393993" iyy="0.250711665" iyz="-0.089236308" izz="0.15494443"/>
     </inertial>
   </link>
   <link name="link1">
@@ -82,9 +82,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="2.520440484"/>
-      <origin rpy="0 0 0" xyz="0.001336                             0.017855                             0.261572"/>
-      <inertia ixx="0.021369338" ixy="1.13e-07" ixz="-3.834e-06" iyy="0.020930725" iyz="-0.001763079" izz="0.004182258"/>
+      <mass value="18.195720206"/>
+      <origin rpy="0 0 0" xyz="0.000240331                             -0.054540577                             0.274633037"/>
+      <inertia ixx="3.464049922" ixy="-0.000562113" ixz="0.00073117" iyy="3.440234068" iyz="-0.042986656" izz="0.157533551"/>
     </inertial>
   </link>
   <link name="link2">
@@ -102,9 +102,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="3.1785267"/>
-      <origin rpy="0 0 0" xyz="-0.012687                             0.008506                             0.411406"/>
-      <inertia ixx="0.0613073" ixy="0.000497436" ixz="0.008654534" iyy="0.061429858" iyz="-0.000301492" izz="0.008932949"/>
+      <mass value="22.845886455"/>
+      <origin rpy="0 0 0" xyz="0.000350858                             -0.222504834                             0.392300733"/>
+      <inertia ixx="0.392300733" ixy="5.896e-06" ixz="0.034805416" iyy="0.111550655" iyz="0.067247963" izz="0.076018726"/>
     </inertial>
   </link>
   <link name="link3">
@@ -122,9 +122,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="1.601379441"/>
-      <origin rpy="0 0 0" xyz="-0.007513                             0.016906                             0.583953"/>
-      <inertia ixx="0.006489986" ixy="-0.000525078" ixz="0.001710122" iyy="0.007023542" iyz="-0.000818226" izz="0.003296162"/>
+      <mass value="7.83830585"/>
+      <origin rpy="0 0 0" xyz="1.1068e-05                             0.072653038                             0.060501825"/>
+      <inertia ixx="0.060501825" ixy="2.2514e-05" ixz="0.024288356" iyy="0.367218603" iyz="0.022510592" izz="0.36403022"/>
     </inertial>
   </link>
   <link name="link4">
@@ -142,9 +142,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="1.882223023"/>
-      <origin rpy="0 0 0" xyz="0.150496                             -0.00038                             0.609627"/>
-      <inertia ixx="0.013319852" ixy="-1.85e-06" ixz="8.67e-07" iyy="0.012519892" iyz="-0.00143894" izz="0.002788281"/>
+      <mass value="6.943393986"/>
+      <origin rpy="0 0 0" xyz="-4.8663e-05                             -0.012031009                             -0.294370638"/>
+      <inertia ixx="0.016980216" ixy="-6.525e-06" ixz="1.1833e-05" iyy="0.010158127" iyz="0.001464221" izz="0.012000093"/>
     </inertial>
   </link>
   <link name="link5">
@@ -162,9 +162,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="1.507185922"/>
-      <origin rpy="0 0 0" xyz="0.319227                             0.001458                             0.610932"/>
-      <inertia ixx="0.005032625" ixy="-6.075e-06" ixz="-1.293e-06" iyy="0.002614418" iyz="-0.000331648" izz="0.003944803"/>
+      <mass value="3.229294314"/>
+      <origin rpy="0 0 0" xyz="6.5407e-05                             0.037815201                             0.018830826"/>
+      <inertia ixx="0.003408808" ixy="-5.94e-07" ixz="1.907e-06" iyy="0.003419538" iyz="-1.072e-06" izz="0.002022276"/>
     </inertial>
   </link>
   <link name="link6">
@@ -182,9 +182,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.634034296"/>
-      <origin rpy="0 0 0" xyz="0.0                             0.0                             0.0"/>
-      <inertia ixx="0.000997016" ixy="-1.376e-06" ixz="8.97e-07" iyy="0.00100253" iyz="1.581e-06" izz="0.000447948"/>
+      <mass value="1.586348204"/>
+      <origin rpy="0 0 0" xyz="-3.1443e-05                             5.1657e-05                             -0.052799124"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
     </inertial>
   </link>
   <link name="tcp"/>
@@ -240,7 +240,8 @@
   <joint name="tcp" type="fixed">
     <parent link="link6"/>
     <child link="tcp"/>
-    <origin rpy="0 0 0" xyz="0 0 0.06"/>
+    <!-- <origin xyz="0 0 0.06" rpy="0 0 0"/> -->
+    <origin rpy="0.0                         0.0                         0.0" xyz="0.0                          0.0                          0.04"/>
   </joint>
   <transmission name="tran0">
     <type>transmission_interface/SimpleTransmission</type>

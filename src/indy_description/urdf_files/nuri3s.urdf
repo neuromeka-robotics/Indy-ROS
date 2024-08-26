@@ -63,7 +63,7 @@
     </collision>
     <inertial>
       <mass value="0.858186768"/>
-      <origin rpy="0 0 0" xyz="-0.033213                             -0.001385                             0.101897"/>
+      <origin rpy="0 0 0" xyz="-0.0001269426                             0.0005108801                             0.0488997513"/>
       <inertia ixx="0.001565927" ixy="-1.08e-07" ixz="-9.65e-07" iyy="0.001520073" iyz="-4.4915e-05" izz="0.001972781"/>
     </inertial>
   </link>
@@ -83,7 +83,7 @@
     </collision>
     <inertial>
       <mass value="2.520440484"/>
-      <origin rpy="0 0 0" xyz="0.001336                             0.017855                             0.261572"/>
+      <origin rpy="0 0 0" xyz="2.2204e-05                             -0.008727763                             0.22543341"/>
       <inertia ixx="0.021369338" ixy="1.13e-07" ixz="-3.834e-06" iyy="0.020930725" iyz="-0.001763079" izz="0.004182258"/>
     </inertial>
   </link>
@@ -103,7 +103,7 @@
     </collision>
     <inertial>
       <mass value="3.1785267"/>
-      <origin rpy="0 0 0" xyz="-0.012687                             0.008506                             0.411406"/>
+      <origin rpy="0 0 0" xyz="0.018500507                             -0.068861752                             0.142338346"/>
       <inertia ixx="0.0613073" ixy="0.000497436" ixz="0.008654534" iyy="0.061429858" iyz="-0.000301492" izz="0.008932949"/>
     </inertial>
   </link>
@@ -123,7 +123,7 @@
     </collision>
     <inertial>
       <mass value="1.601379441"/>
-      <origin rpy="0 0 0" xyz="-0.007513                             0.016906                             0.583953"/>
+      <origin rpy="0 0 0" xyz="0.025033992                             0.011525635                             0.041307263"/>
       <inertia ixx="0.006489986" ixy="-0.000525078" ixz="0.001710122" iyy="0.007023542" iyz="-0.000818226" izz="0.003296162"/>
     </inertial>
   </link>
@@ -143,7 +143,7 @@
     </collision>
     <inertial>
       <mass value="1.882223023"/>
-      <origin rpy="0 0 0" xyz="0.150496                             -0.00038                             0.609627"/>
+      <origin rpy="0 0 0" xyz="-2.5487e-05                             -0.01092259                             -0.071267109"/>
       <inertia ixx="0.013319852" ixy="-1.85e-06" ixz="8.67e-07" iyy="0.012519892" iyz="-0.00143894" izz="0.002788281"/>
     </inertial>
   </link>
@@ -163,7 +163,7 @@
     </collision>
     <inertial>
       <mass value="1.507185922"/>
-      <origin rpy="0 0 0" xyz="0.319227                             0.001458                             0.610932"/>
+      <origin rpy="0 0 0" xyz="2.911e-06                             0.029173125                             0.007018623"/>
       <inertia ixx="0.005032625" ixy="-6.075e-06" ixz="-1.293e-06" iyy="0.002614418" iyz="-0.000331648" izz="0.003944803"/>
     </inertial>
   </link>
@@ -183,7 +183,7 @@
     </collision>
     <inertial>
       <mass value="0.634034296"/>
-      <origin rpy="0 0 0" xyz="0.0                             0.0                             0.0"/>
+      <origin rpy="0 0 0" xyz="7.2631e-05                             7.9047e-05                             -0.044852927"/>
       <inertia ixx="0.000997016" ixy="-1.376e-06" ixz="8.97e-07" iyy="0.00100253" iyz="1.581e-06" izz="0.000447948"/>
     </inertial>
   </link>
@@ -240,7 +240,8 @@
   <joint name="tcp" type="fixed">
     <parent link="link6"/>
     <child link="tcp"/>
-    <origin rpy="0 0 0" xyz="0 0 0.06"/>
+    <!-- <origin xyz="0 0 0.06" rpy="0 0 0"/> -->
+    <origin rpy="0.0                         0.0                         0.0" xyz="0.0                          0.0                          0.0285"/>
   </joint>
   <transmission name="tran0">
     <type>transmission_interface/SimpleTransmission</type>

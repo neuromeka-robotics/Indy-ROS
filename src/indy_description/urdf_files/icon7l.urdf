@@ -233,14 +233,15 @@
   <joint name="joint5" type="revolute">
     <parent link="link5"/>
     <child link="link6"/>
-    <origin rpy="-1.570796327                         0.0                         0.0" xyz="0.0                          0.089                          0.0"/>
+    <origin rpy="1.570796327                         0.0                         3.14159265" xyz="0.0                          0.089                          0.0"/>
     <axis xyz="0 0 1"/>
     <limit effort="79.79" lower="-6.283185307179586" upper="6.283185307179586" velocity="14.224433403753785"/>
   </joint>
   <joint name="tcp" type="fixed">
     <parent link="link6"/>
     <child link="tcp"/>
-    <origin rpy="0 0 0" xyz="0 0 0.06"/>
+    <!-- <origin xyz="0 0 0.06" rpy="0 0 0"/> -->
+    <origin rpy="0.0                         0.0                         0.0" xyz="0.0                          0.0                          0.0"/>
   </joint>
   <transmission name="tran0">
     <type>transmission_interface/SimpleTransmission</type>
