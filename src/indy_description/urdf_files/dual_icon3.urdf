@@ -410,12 +410,12 @@
   <joint name="left_arm_connect" type="fixed">
     <parent link="body_frame"/>
     <child link="left_arm_link0"/>
-    <origin rpy="-1.570796327                         0.0                         -0.261799388" xyz="0.008367                          0.042157                          0.541659"/>
+    <origin rpy="-1.570796327                         0.0                         -0.261799388" xyz="0.011367                          0.042157                          0.541659"/>
   </joint>
   <joint name="right_arm_connect" type="fixed">
     <parent link="body_frame"/>
     <child link="right_arm_link0"/>
-    <origin rpy="1.570796327                         0.0                         0.261799388" xyz="0.008367                          -0.042157                          0.541659"/>
+    <origin rpy="1.570796327                         0.0                         0.261799388" xyz="0.011367                          -0.042157                          0.541659"/>
   </joint>
   <joint name="left_arm_joint0" type="revolute">
     <parent link="left_arm_link0"/>

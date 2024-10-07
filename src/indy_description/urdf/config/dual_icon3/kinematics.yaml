@@ -16,7 +16,7 @@ kinematics:
     yaw: 0.0
 
   left_arm_connect:
-    x: 0.008367
+    x: 0.011367 #008367
     y: 0.042157
     z: 0.541659
     roll: -1.570796327
@@ -24,7 +24,7 @@ kinematics:
     yaw: -0.261799388
 
   right_arm_connect:
-    x: 0.008367
+    x: 0.011367
     y: -0.042157
     z: 0.541659
     roll: 1.570796327
