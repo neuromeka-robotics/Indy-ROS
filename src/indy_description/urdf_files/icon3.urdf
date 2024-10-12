@@ -212,10 +212,10 @@
   <joint name="joint2" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
-    <origin rpy="0.0                         0.0                         0.0" xyz="0.0                          0.26                          0.0"/>
+    <origin rpy="0.0                         0.0                         1.570796327" xyz="0.0                          0.26                          0.0"/>
     <axis xyz="0 0 1"/>
     <dynamics damping="0.1" friction="10.0"/>
-    <limit effort="197.23" lower="-1.8849555921538759" upper="2.652900463031381" velocity="9.16297857297023"/>
+    <limit effort="197.23" lower="-3.4557519189487724" upper="1.0821041362364843" velocity="9.16297857297023"/>
   </joint>
   <joint name="joint3" type="revolute">
     <parent link="link3"/>
