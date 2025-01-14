@@ -16,7 +16,6 @@
   <xacro:arg name="visual_params" default="$(find indy_description)/urdf/config/$(arg indy_type)/visual_parameters.yaml"/>
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
 
-
   <link name="world" />
 
 	<xacro:indy_robot

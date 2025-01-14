@@ -13,6 +13,7 @@ from std_msgs.msg import Float64MultiArray, Int32MultiArray
 from actionlib_msgs.msg import GoalStatusArray, GoalStatus, GoalID
 from trajectory_msgs.msg import JointTrajectory
 from control_msgs.msg import FollowJointTrajectoryFeedback, FollowJointTrajectoryActionFeedback
+from geometry_msgs.msg import WrenchStamped
 
 from indy_define import *
 from indy_driver.srv import IndyService, IndyServiceResponse
@@ -39,6 +40,9 @@ class IndyROSConnector:
         # Initialize ROS node
         rospy.init_node('indy_driver_dcp')
         self.rate = rospy.Rate(20) # hz
+
+        # Get FT sensor data
+        self.ft_data_pub = rospy.Publisher("indy/ft_data", WrenchStamped, queue_size=10)
 
         # Publish current robot state
         self.joint_state_pub = rospy.Publisher("joint_states", JointState, queue_size=10)
@@ -312,12 +316,30 @@ class IndyROSConnector:
         
         self.servo_tx_pub.publish(msg)
 
+    def wrench_publisher(self):
+        try:
+            ft_data = self.indy.get_ft_sensor_data()
+
+            ft_msg = WrenchStamped()
+            ft_msg.wrench.force.x = ft_data["ft_Fx"]
+            ft_msg.wrench.force.y = ft_data["ft_Fy"]
+            ft_msg.wrench.force.z = ft_data["ft_Fz"]
+
+            ft_msg.wrench.torque.x = ft_data["ft_Tx"]
+            ft_msg.wrench.torque.y = ft_data["ft_Ty"]
+            ft_msg.wrench.torque.z = ft_data["ft_Tz"]
+
+            self.ft_data_pub.publish(ft_msg)
+        except:
+            pass
+
     def run(self):
         self.connect()
         while not rospy.is_shutdown():
             self.joint_state_publisher()
             self.publish_servo_rx_data()
             self.publish_servo_tx_data()
+            self.wrench_publisher()
             
 def main():
     indy_ip = rospy.get_param("indy_ip", "192.168.1.29")
